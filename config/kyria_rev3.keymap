@@ -24,21 +24,21 @@
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  à  |  Q  |  W  |  E   |  R   |  T   |                                    |  Y   |  U    |  I    |  O   |   P   |  Ü  |
             // |  á  |  A  |  S  |  D   |  F   |  G   |                                    |  H   |  J    |  K    |  L   |   Ö   |  Ä  |
-            // |  â  |  Z  |  X  |  C   |  V   |  B   |  BSPC   | CTRL |    | ALT  |  DEL  |  N   |  M    |  ,    |  .   |   -   |  ß  |
-            //                   | HOME |  GUI |  M4  |  SHIFT  | ESC  |    | RET  | SPACE |  M3  |  TAB  | END |
+            // |  â  |  Z  |  X  |  C   |  V   |  B   |   M3  |  GUI |      | ESC  |  TAB  |  N   |  M    |  ,    |  .   |   -   |  ß  |
+            //                   | HOME | ALT  | CTRL | SHIFT | L M4 |      | BSPC |       |  RET | R M4  | DEL |
             //
             // QWERTY:
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  =  |  Q  |  W  |  E   |  R   |  T   |                                    |  Y   |  U    |  I    |  O   |   P   |  [  |
             // |  ]  |  A  |  S  |  D   |  F   |  G   |                                    |  H   |  J    |  K    |  L   |   ;   |  '  |
-            // |  `  |  Z  |  X  |  C   |  V   |  B   |  BSPC   | CTRL |    | ALT  |  DEL  |  N   |  M    |  ,    |  .   |   /   |  -  |
-            //                   | HOME | GUI  | R ALT |  SHIFT  | ESC  |    | RET  | SPACE |  \  |  TAB  | END |
+            // |  `  |  Z  |  X  |  C   |  V   |  B   |    \   | GUI |     |  ESC  |  TAB  |  N   |  M    |  ,    |  .   |   /   |  -  |
+            //                   | HOME | L ALT | CTRL | SHIFT |     |     | BSPC  | SPACE |  RET | R ALT | DEL |
 
             bindings = <
             &kp EQUAL &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp LBKT
             &kp RBKT  &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-            &kp GRAVE &kp Z &kp X &kp C &kp V &kp B &kp BSPC  &kp LCTRL        &kp LALT  &kp DEL   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
-            &kp HOME  &kp LGUI &kp RALT &kp LSHIFT &kp ESC        &kp RET  &kp SPACE  &kp BSLH &kp TAB  &kp END
+            &kp GRAVE &kp Z &kp X &kp C &kp V &kp B &kp BSLH   &kp LGUI        &kp ESC   &kp TAB   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
+                      &kp HOME  &kp LALT &kp LCTRL  &kp LSHIFT &kp NUBS        &kp BSPC  &kp SPACE &kp RET &kp RALT &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;

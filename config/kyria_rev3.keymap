@@ -12,6 +12,8 @@
 #define LM4 NUBS
 #define RM4 RALT
 
+#define SYM 1
+
 &led_strip {
     chain-length = <6>;
     // chain-length = <31>; // Uncomment if using both per-key and underglow LEDs
@@ -53,10 +55,16 @@
             bindings = <
             &kp EQUAL &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp LBKT
             &kp RBKT  &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-            &kp GRAVE &kp Z &kp X &kp C &kp V &kp B    &sk LM3    &kp LGUI     &kp ESC   &kp TAB   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
+            &kp GRAVE &kp Z &kp X &kp C &kp V &kp B    &sl SYM    &kp LGUI     &kp ESC   &kp TAB   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
                       &neo_compose &kp LALT &kp LCTRL  &sk LSHIFT &sk LM4      &kp BSPC  &kp SPACE &kp RET &sk RM4 &kp DEL
             >;
 
+        };
+
+        sym_layer {
+            bindings = <
+            &none    &kp UNDER &kp LBKT &kp RBKT  &kp CARET &kp EXCL
+            >; 
         };
     };
 };

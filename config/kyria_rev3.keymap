@@ -80,10 +80,10 @@
             >; 
         };
 
-        // fun_layer {
-        //     bindings = <
-        //     &rgb_ug RGB_HUI &rgb_ug RGB_HUD
-        //     >;
-        // };
+        fun_layer {
+            bindings = <
+            &none &kp J &kp K
+            >;
+        };
     };
 };

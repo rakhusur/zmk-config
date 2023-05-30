@@ -7,15 +7,31 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-/* Uncomment this block if using RGB
+#define LM3 CAPS
+#define RM3 BSLH
+#define LM4 NUBS
+#define RM4 RALT
+
 &led_strip {
     chain-length = <6>;
     // chain-length = <31>; // Uncomment if using both per-key and underglow LEDs
     // chain-length = <25>; // Uncomment if using only per-key LEDs.
 };
- */
 
 / {
+    macros {
+        neo_compose: neo_compose {
+            label = "ZM_neo_compose";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RM3>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp RM3>
+                ;
+        };
+    };
+        
     keymap {
         compatible = "zmk,keymap";
 
@@ -37,11 +53,10 @@
             bindings = <
             &kp EQUAL &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp LBKT
             &kp RBKT  &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-            &kp GRAVE &kp Z &kp X &kp C &kp V &kp B &kp BSLH   &kp LGUI        &kp ESC   &kp TAB   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
-                      &kp HOME  &kp LALT &kp LCTRL  &kp LSHIFT &kp NUBS        &kp BSPC  &kp SPACE &kp RET &kp RALT &kp DEL
+            &kp GRAVE &kp Z &kp X &kp C &kp V &kp B    &sk LM3    &kp LGUI     &kp ESC   &kp TAB   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
+                      &neo_compose &kp LALT &kp LCTRL  &sk LSHIFT &sk LM4      &kp BSPC  &kp SPACE &kp RET &sk RM4 &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };

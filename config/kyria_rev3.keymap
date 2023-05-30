@@ -82,7 +82,7 @@
 
         fun_layer {
             bindings = <
-            &rgb_ug RGB_HUI &rgb_ug RGB_HUD
+            &rgb_ug RGB_HUI(20) &rgb_ug RGB_HUD(20)
             >;
         };
     };

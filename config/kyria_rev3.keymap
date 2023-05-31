@@ -34,6 +34,16 @@
                 , <&macro_release &kp RM3>
                 ;
         };
+
+        sl_fun: sl_fun {
+            label = "ZM_sl_fun";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_release &kp RALT>
+                , <&macro_tap &sl FUN>
+                ;
+        };
     };
 
     // Switch to NAVNUM, but if RALT is pressed, switch to FUN instead.
@@ -41,7 +51,7 @@
         compatible = "zmk,behavior-mod-morph";
         label = "SWITCH_NAVNUM_FUN";
         #binding-cells = <0>;
-        bindings = <&sl NAVNUM>, <&sl FUN>;
+        bindings = <&sl NAVNUM>, <&sl_fun>;
         mods = <MOD_RALT>;
     };        
 

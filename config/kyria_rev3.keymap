@@ -35,13 +35,16 @@
                 ;
         };
 
+        // Release RALT, then act like &sl FUN
         sl_fun: sl_fun {
             label = "ZM_sl_fun";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LALT>
-                , <&macro_tap &sl FUN>
+                = <&macro_release &kp RALT>
+                , <&macro_press &sl FUN>
+                , <&macro_wait_for_release>
+                , <&macro_release &sl FUN>
                 ;
         };
     };

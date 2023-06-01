@@ -22,6 +22,10 @@
     // chain-length = <25>; // Uncomment if using only per-key LEDs.
 };
 
+&sk {
+    quick-release;
+};
+
 / {
     macros {
         neo_compose: neo_compose {

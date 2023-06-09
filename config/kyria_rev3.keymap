@@ -68,20 +68,12 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // Neoqwertz:
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  à  |  Q  |  W  |  E   |  R   |  T   |                                    |  Y   |  U    |  I    |  O   |   P   |  Ü  |
-            // |  á  |  A  |  S  |  D   |  F   |  G   |                                    |  H   |  J    |  K    |  L   |   Ö   |  Ä  |
-            // |  â  |  Z  |  X  |  C   |  V   |  B   |   M3  |  GUI |      | ESC  |  TAB  |  N   |  M    |  ,    |  .   |   -   |  ß  |
-            //                   | HOME | ALT  | CTRL | SHIFT | L M4 |      | RET  |       | BSPC | R M4  | DEL |
-
             bindings = <
-            &kp EQUAL &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp LBKT
-            &kp RBKT  &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-            &kp GRAVE &kp Z &kp X &kp C &kp V &kp B    &sk LM3    &kp LGUI     &kp ESC   &kp TAB   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
-                      &neo_compose &kp LALT &kp LCTRL  &sk LSHIFT &navnumfun   &kp RET   &kp SPACE &kp BSPC &sk RALT &kp DEL
+            &kp EQUAL &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
+            &kp BSLH  &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp LBKT
+            &kp GRAVE &kp Z &kp X &kp C &kp V &kp B    &sk LM3    &kp LGUI     &kp ESC   &kp TAB   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RBKT
+                      &neo_compose &kp LALT &kp LCTRL  &sk LSHIFT &navnumfun   &kp RET   &kp SPACE &kp BSPC &sk RALT &kp SQT
             >;
-
         };
 
         navnum_layer {

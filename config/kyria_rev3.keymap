@@ -71,8 +71,8 @@
             bindings = <
             &kp EQUAL &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
             &kp BSLH  &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp LBKT
-            &kp GRAVE &kp Z &kp X &kp C &kp V &kp B    &sk LCTRL  &kp LGUI     &kp ESC   &kp TAB   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RBKT
-                      &neo_compose &kp LALT &kp LM3    &sk LSHIFT &navnumfun   &kp RET   &kp SPACE &kp BSPC &sk RALT &kp SQT
+            &kp GRAVE &kp Z &kp X &kp C &kp V &kp B    &kp LCTRL  &kp LGUI     &kp ESC   &kp TAB   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RBKT
+                      &neo_compose &kp LALT &sk LM3    &sk LSHIFT &navnumfun   &kp RET   &kp SPACE &kp BSPC &sk RALT &kp SQT
             >;
         };
 

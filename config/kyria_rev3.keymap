@@ -89,7 +89,7 @@
             bindings = <
             &none &kp PGUP  &kp BSPC  &kp UP    &kp DEL   &kp PGDN                                           &kp KP_DIVIDE   &kp N7     &kp N8     &kp N9     &kp KP_MINUS &kp KP_LPAR
             &none &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT &kp END                                            &kp KP_MULTIPLY &kp N4     &kp N5     &kp N6     &kp KP_PLUS  &kp KP_EQUAL
-            &none &kp ESC   &kp TAB   &kp INS   &kp RET   &kp K_UNDO   &trans    &trans      &trans &trans   &kp KP_DOT      &kp N1     &kp N2     &kp N3     &kp KP_COMMA &kp KP_RPAR
+            &none &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(A)    &trans    &trans      &trans &trans   &kp KP_DOT      &kp N1     &kp N2     &kp N3     &kp KP_COMMA &kp KP_RPAR
                                           &trans    &trans    &trans   &trans    &tog NAVNUM &trans &kp N0 &trans &sl FUN &trans
             >; 
         };

@@ -66,7 +66,7 @@
         ctrl: ctrl {
             compatible = "zmk,behavior-macro-one-param";
             label = "ctrl";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             bindings
                 = <&macro_press &kp LCTL>
                 , <&macro_param_1to1>

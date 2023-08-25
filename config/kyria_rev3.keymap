@@ -63,17 +63,17 @@
             bindings = <&sl NAVNUM>, <&tog NAVNUM>;
         };
 
-        ctrl: ctrl {
-            compatible = "zmk,behavior-macro-one-param";
-            label = "ctrl";
-            #binding-cells = <1>;
-            bindings
-                = <&macro_press &kp LCTL>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LCTL>
-                ;
-        };
+        // ctrl: ctrl {
+        //     compatible = "zmk,behavior-macro-one-param";
+        //     label = "ctrl";
+        //     #binding-cells = <1>;
+        //     bindings
+        //         = <&macro_press &kp LCTL>
+        //         , <&macro_param_1to1>
+        //         , <&macro_tap &kp MACRO_PLACEHOLDER>
+        //         , <&macro_release &kp LCTL>
+        //         ;
+        // };
     };
 
     // Switch to NAVNUM, but if RALT is pressed, switch to FUN instead.
@@ -99,10 +99,10 @@
 
         navnum_layer {
             bindings = <
-            &kp K_CUT &kp PGUP  &kp BSPC  &kp UP    &kp DEL   &kp PGDN                                                            &kp KP_DIVIDE   &kp N7     &kp N8     &kp N9     &kp KP_MINUS &kp KP_LPAR
-            &kp K_COPY &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT &kp END                                                            &kp KP_MULTIPLY &kp N4     &kp N5     &kp N6     &kp KP_PLUS  &kp KP_EQUAL
-            &kp K_PASTE &kp C_AC_UNDO &kp C_AC_CUT &kp C_AC_COPY &kp C_AC_PASTE &ctrl A      &trans    &trans      &trans &trans  &kp KP_DOT      &kp N1     &kp N2     &kp N3     &kp KP_COMMA &kp KP_RPAR
-                                          &trans    &trans    &trans   &trans    &tog NAVNUM           &trans &kp N0 &trans &sl FUN &trans
+            &none    &none     &kp BSPC  &kp UP    &kp DEL   &kp LC(DEL)                                                          &kp KP_DIVIDE   &kp N7     &kp N8     &kp N9     &kp KP_MINUS &kp KP_LPAR
+            &kp PGUP &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT &kp END                                                              &kp KP_MULTIPLY &kp N4     &kp N5     &kp N6     &kp KP_PLUS  &kp KP_EQUAL
+            &kp PGDN &kp C_AC_PASTE &kp C_AC_CUT &kp C_AC_COPY &kp C_AC_UNDO &kp C_AC_REDO &trans    &trans        &trans &trans  &kp KP_DOT      &kp N1     &kp N2     &kp N3     &kp KP_COMMA &kp KP_RPAR
+                                                              &trans    &trans    &trans   &trans    &tog NAVNUM   &trans &kp N0 &trans &sl FUN &trans
             >; 
         };
 
@@ -110,8 +110,8 @@
             bindings = <
             &none   &none   &none           &kp C_BRI_DN    &kp C_BRI_UP    &none                                                     &kp K_CMENU &kp F7  &kp F8  &kp F9  &kp F12 &none
             &none   &none   &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &none                                                     &kp PSCRN   &kp F4  &kp F5  &kp F6  &kp F11 &none
-            &none   &none   &rgb_ug RGB_TOG &rgb_ug RGB_BRD &rgb_ug RGB_BRI &none     &trans       &bt BT_CLR       &trans  &trans    &none       &kp F1  &kp F2  &kp F3  &kp F10 &none
-                                               &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &trans     &trans  &trans  &trans  &trans
+            &none   &none   &none           &none           &none           &none     &trans       &bt BT_CLR       &trans  &trans    &none       &kp F1  &kp F2  &kp F3  &kp F10 &none
+                                               &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &trans  &trans  &trans  &trans  &trans
             >;
         };
     };

@@ -90,19 +90,19 @@
 
         default_layer {
             bindings = <
-            &kp EQUAL &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
-            &kp BSLH  &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp LBKT
-            &kp GRAVE &kp Z &kp X &kp C &kp V &kp B    &sk LM3    &kp LGUI     &kp ESC   &kp TAB   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RBKT
+            &kp MINUS &kp GRAVE &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp BSLH &kp EQUAL
+            &kp Q     &kp A     &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp P
+            &kp RBKT  &kp Z     &kp X &kp C &kp V &kp B    &sk LM3    &kp LGUI     &kp ESC   &kp TAB   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LBKT
                       &neo_compose &kp LALT &kp LCTRL  &sk LSHIFT &navnumfun   &kp RET   &kp SPACE &kp BSPC &sk RALT &kp SQT
             >;
         };
 
         navnum_layer {
             bindings = <
-            &none    &none     &kp BSPC  &kp UP    &kp DEL   &kp LC(DEL)                                                          &kp KP_DIVIDE   &kp N7     &kp N8     &kp N9     &kp KP_MINUS &kp KP_LPAR
-            &kp PGUP &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT &kp END                                                              &kp KP_MULTIPLY &kp N4     &kp N5     &kp N6     &kp KP_PLUS  &kp KP_EQUAL
-            &kp PGDN &kp C_AC_PASTE &kp C_AC_CUT &kp C_AC_COPY &kp C_AC_UNDO &kp C_AC_REDO &trans    &trans        &trans &trans  &kp KP_DOT      &kp N1     &kp N2     &kp N3     &kp KP_COMMA &kp KP_RPAR
-                                                              &trans    &trans    &trans   &trans    &tog NAVNUM   &trans &kp N0 &trans &sl FUN &trans
+            &none    &none     &kp BSPC  &kp UP    &kp DEL   &kp LC(DEL)                                                          &kp KP_COMMA  &kp N7     &kp N8     &kp N9     &none           &none
+            &kp PGUP &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT &kp END                                                              &kp KP_DOT    &kp N4     &kp N5     &kp N6     &kp KP_PLUS     &kp KP_MINUS
+            &kp PGDN &kp C_AC_PASTE &kp C_AC_CUT &kp C_AC_COPY &kp C_AC_UNDO &kp C_AC_REDO &trans    &trans        &trans &trans  &kp KP_N0     &kp N1     &kp N2     &kp N3     &kp KP_MULTIPLY &kp KP_DIVIDE
+                                                              &trans    &trans    &trans   &trans    &tog NAVNUM   &trans &trans &trans &sl FUN &trans
             >; 
         };
 

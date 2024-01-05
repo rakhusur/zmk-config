@@ -15,6 +15,18 @@
 #define LM4 NUBS
 #define RM4 RALT
 
+#define LSGT NUBS
+#define AB10 FSLH
+#define AC10 SEMI
+#define AC11 APOS
+#define AC12 BSLH
+#define AD10 P
+#define AD11 LBKT
+#define AD12 RBKT
+#define AE00 TILDE
+#define AE11 MINUS
+#define AE12 EQUAL
+
 #define NAVNUM 1
 #define FUN 2
 

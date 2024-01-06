@@ -23,7 +23,7 @@
 #define AD10 P
 #define AD11 LBKT
 #define AD12 RBKT
-#define AE00 TILDE
+#define AE00 GRAVE
 #define AE11 MINUS
 #define AE12 EQUAL
 

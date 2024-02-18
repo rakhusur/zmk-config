@@ -36,23 +36,20 @@
     // chain-length = <25>; // Uncomment if using only per-key LEDs.
 };
 
+// Make Sticky key and sticky layer behave the same way:
+
 &sk {
     quick-release;
 };
 
+&sl {
+    ignore-modifiers; // NOTE: ZMK decides what key codes are considered modifiers.
+                      // This means that it makes a difference whether CAPS or AC12 is
+                      // used as modifier.
+};
+
 / {
     macros {
-        neo_compose: neo_compose {
-            label = "ZM_neo_compose";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RM3>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp RM3>
-                ;
-        };
-
         // Release RALT, then act like &sl FUN
         sl_fun: sl_fun {
             label = "ZM_sl_fun";
@@ -74,18 +71,6 @@
             tapping-term-ms = <200>;
             bindings = <&sl NAVNUM>, <&tog NAVNUM>;
         };
-
-        // ctrl: ctrl {
-        //     compatible = "zmk,behavior-macro-one-param";
-        //     label = "ctrl";
-        //     #binding-cells = <1>;
-        //     bindings
-        //         = <&macro_press &kp LCTL>
-        //         , <&macro_param_1to1>
-        //         , <&macro_tap &kp MACRO_PLACEHOLDER>
-        //         , <&macro_release &kp LCTL>
-        //         ;
-        // };
     };
 
     // Switch to NAVNUM, but if RALT is pressed, switch to FUN instead.
